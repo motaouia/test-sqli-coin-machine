@@ -18,16 +18,13 @@ public class CoinMachineTest {
 	@Test
 	void should_init_coin_machine() {
 		coinMachine.putMoneyInside("100x50");
-		//double total = coinMachine.totalMoney();
-		assertEquals(5000, 5000);
+		double total = coinMachine.totalMoney();
+		assertEquals(5000, total);
 	}
 
 	@Test
 	void should_init_coin_machine_with_multiple_deposit() {
-		coinMachine.putMoneyInside("190x430");
-		coinMachine.putMoneyInside("100x450");
-		coinMachine.putMoneyInside("100x600");
-		coinMachine.putMoneyInside("100x10");
+		coinMachine.putMoneyInside("100x50");
 		coinMachine.putMoneyInside("50x20");
 		double total = coinMachine.totalMoney();
 		assertEquals(6000, total);
@@ -41,7 +38,7 @@ public class CoinMachineTest {
 		assertEquals(50, coinMachine.check(20));
 	}
 
-	/*@Test
+	@Test
 	void should_get_money() {
 		coinMachine.putMoneyInside("100x50");
 		coinMachine.putMoneyInside("50x20");
@@ -49,5 +46,4 @@ public class CoinMachineTest {
 		assertEquals(98, coinMachine.check(50));
 		assertEquals(48, coinMachine.check(20));
 	}
-	*/
 }
