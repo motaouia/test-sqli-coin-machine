@@ -10,7 +10,6 @@ public class CoinMachine {
 	double total = 0.0;
 	Map<Integer, Integer> myMap = new HashMap<>();
 	
-	
 	public void putMoneyInside(String input) {
 		String[] facteurs = input.split("x");
 		Integer keyValue = Integer.parseInt(facteurs[1]);
@@ -34,11 +33,11 @@ public class CoinMachine {
 		Arrays.sort(myKeysAsArrays);
 		int indexOfmaxCoin = myKeysAsArrays.length - 1;
 		while (value >= myKeysAsArrays[0]) {
-			
-			if (value >= myKeysAsArrays[indexOfmaxCoin]) {
-				value -= myKeysAsArrays[indexOfmaxCoin];
-				int currentValue = (this.myMap).get(myKeysAsArrays[indexOfmaxCoin]);
-				this.myMap.put(myKeysAsArrays[indexOfmaxCoin], currentValue - 1);
+			Integer maxCoin = myKeysAsArrays[indexOfmaxCoin];
+			if (value >= maxCoin) {
+				value -= maxCoin;
+				int currentValue = (this.myMap).get(maxCoin);
+				this.myMap.put(maxCoin, currentValue - 1);
 			} else if (value < myKeysAsArrays[indexOfmaxCoin]) {
 				indexOfmaxCoin--;
 				continue;
