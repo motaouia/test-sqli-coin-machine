@@ -28,7 +28,7 @@ public class CoinMachine {
 	}
 
 	public void getMoney(int value) {
-		Set<Integer> coins = ((HashMap<Integer, Integer>) this.mapOfCoins).keySet();
+		Set<Integer> coins = this.mapOfCoins.keySet();
 		Integer[] arrayOfCoins =  coins.toArray(new Integer[coins.size()]);
 		Arrays.sort(arrayOfCoins);
 		int indexOfmaxCoin = arrayOfCoins.length - 1;
