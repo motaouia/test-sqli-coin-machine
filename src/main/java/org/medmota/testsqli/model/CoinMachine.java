@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Set;
 
 public class CoinMachine {
-
 	double total = 0.0;
 	Map<Integer, Integer> mapOfCoins = new HashMap<>();
 	
