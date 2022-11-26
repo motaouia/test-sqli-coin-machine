@@ -34,12 +34,11 @@ public class CoinMachine {
 		int indexOfmaxCoin = arrayOfCoins.length - 1;
 		while (value >= arrayOfCoins[0]) {
 			Integer maxCoin = arrayOfCoins[indexOfmaxCoin];
-			if (value >= maxCoin && (this.mapOfCoins).get(maxCoin) >= 1) {
+			if (value >= maxCoin && this.mapOfCoins.get(maxCoin) >= 1) {
 				value -= maxCoin;
 				this.mapOfCoins.put(maxCoin, (this.mapOfCoins).get(maxCoin) - 1);
 			} else if (value < maxCoin || check(maxCoin) <=0) {
 				indexOfmaxCoin--;
-				continue;
 			}
 		}
 
