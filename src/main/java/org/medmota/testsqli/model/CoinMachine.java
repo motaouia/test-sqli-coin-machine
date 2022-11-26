@@ -36,8 +36,7 @@ public class CoinMachine {
 			Integer maxCoin = myKeysAsArrays[indexOfmaxCoin];
 			if (value >= maxCoin) {
 				value -= maxCoin;
-				int currentValue = (this.myMap).get(maxCoin);
-				this.myMap.put(maxCoin, currentValue - 1);
+				this.myMap.put(maxCoin, (this.myMap).get(maxCoin) - 1);
 			} else if (value < myKeysAsArrays[indexOfmaxCoin]) {
 				indexOfmaxCoin--;
 				continue;
