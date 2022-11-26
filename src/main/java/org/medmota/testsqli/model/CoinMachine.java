@@ -28,8 +28,8 @@ public class CoinMachine {
 	}
 
 	public void getMoney(int value) {
-		Set<Integer> keySet = ((HashMap<Integer, Integer>) this.mapOfCoins).keySet();
-		Integer[] arrayOfCoins =  keySet.toArray(new Integer[keySet.size()]);
+		Set<Integer> coins = ((HashMap<Integer, Integer>) this.mapOfCoins).keySet();
+		Integer[] arrayOfCoins =  coins.toArray(new Integer[coins.size()]);
 		Arrays.sort(arrayOfCoins);
 		int indexOfmaxCoin = arrayOfCoins.length - 1;
 		while (value >= arrayOfCoins[0]) {
